@@ -18,6 +18,8 @@ new Vue({
 
 // 单元测试
 import chai from 'chai'
+import spies from 'chai-spies'
+chai.use(spies)
 
 const {expect} = chai
 
@@ -83,7 +85,8 @@ const {expect} = chai
   vm.$el.remove()
   vm.$destroy()
 }
-// Todo
+
+// 函数mock
 {
   const Constructor = Vue.extend(Button)
   const vm = new Constructor({
@@ -92,10 +95,11 @@ const {expect} = chai
     }
   })
   vm.$mount()
-  // 期待函数被执行，但这样的写法不严谨
-  vm.$on('click', function() {
-    expect(1).to.eq(1)
-  })
+  let spy = chai.spy(function () {})
+  vm.$on('click', spy)
+  let button = vm.$el
+  button.click()
+  expect(spy).to.have.been.called()
   vm.$el.remove()
   vm.$destroy()
 }
