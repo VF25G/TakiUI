@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/VF25G/webUI/issues"
   },
-  "homepage": "https://github.com/VF25G/webUI#readme"
+  "homepage": "https://github.com/VF25G/webUI#readme",
+  "dependencies": {
+    "vue": "^2.6.12"
+  }
 }
