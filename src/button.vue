@@ -11,7 +11,16 @@
 
 <script>
   export default {
-    props: ['icon', 'iconPosition']
+    props: {
+      icon: {},
+      iconPosition: {
+        type: String,
+        default: 'left',
+        validate(value) {
+          return value === 'left' || value === 'right';
+        }
+      }
+    }
   }
 </script>
 
@@ -30,15 +39,19 @@
     &:hover {
       border-color: var(--border-color-hover);
     }
+
     &:active {
       background-color: var(--button-active-bg);
     }
+
     &:focus {
       outline: none;
     }
+
     > .content {
       order: 2;
     }
+
     > .icon {
       order: 1;
       margin-right: .1em;
@@ -48,6 +61,7 @@
       > .content {
         order: 1;
       }
+
       > .icon {
         order: 2;
         margin-right: 0;
