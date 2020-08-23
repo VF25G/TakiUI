@@ -1,0 +1,23 @@
+{
+  "name": "webui",
+  "version": "0.0.1",
+  "description": "基于Vue实现的UI框架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VF25G/webUI.git"
+  },
+  "keywords": [
+    "vue",
+    "ui"
+  ],
+  "author": "vf25g",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VF25G/webUI/issues"
+  },
+  "homepage": "https://github.com/VF25G/webUI#readme"
+}
