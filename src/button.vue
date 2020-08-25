@@ -3,6 +3,7 @@
           @click="$emit('click')">
     <g-icon class="icon" v-if="icon && !loading" :name="icon"></g-icon>
     <g-icon class="loading icon" v-if="loading" name="loading"></g-icon>
+    <!-- Todo: Element div is not allowed here -->
     <div class="content">
       <slot/>
     </div>
@@ -10,10 +11,12 @@
 </template>
 
 <script>
-  import Vue from 'vue'
   import Icon from './icon'
-  Vue.component('g-icon', Icon)
   export default {
+    name: 'webUIButton',
+    components: {
+      'g-icon': Icon
+    },
     props: {
       icon: {},
       loading: {
@@ -31,7 +34,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   @keyframes spin {
     0% {
       transform: rotate(0deg);
@@ -84,6 +87,7 @@
         margin-left: .1em;
       }
     }
+
     .loading {
       animation: spin 2s infinite linear;
     }
