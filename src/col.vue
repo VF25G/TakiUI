@@ -64,7 +64,7 @@
           ...createClasses({span, offset}),
           ...createClasses(ipad, 'ipad-'),
           ...createClasses(narrowPc, 'narrow-pc-'),
-          ...createClasses(pc, 'pc'),
+          ...createClasses(pc, 'pc-'),
           ...createClasses(widePc, 'wide-pc-')
         ]
       },
