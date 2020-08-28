@@ -39,7 +39,9 @@ new Vue({
   },
   methods: {
     showToast() {
-      this.$toast('message information')
+      this.$toast('message information', {
+        enableHtml: false
+      })
     }
   }
 })
