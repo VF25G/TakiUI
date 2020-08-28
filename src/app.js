@@ -38,9 +38,9 @@ new Vue({
   created() {
   },
   methods: {
-    showToast() {
+    showToast(position) {
       this.$toast(`message information with ${parseInt(Math.random() * 100)}`, {
-        position: 'bottom',
+        position,
         enableHtml: false,
         closeButton: {
           text: 'Done',

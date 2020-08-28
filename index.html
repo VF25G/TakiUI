@@ -35,7 +35,10 @@
 <body>
 
   <div id="app">
-    <button @click="showToast">showToast</button>
+    <button @click="() => {showToast('top')}">Top</button>
+    <button @click="() => {showToast('middle')}">Middle</button>
+    <button @click="() => {showToast('bottom')}">Bottom</button>
+
   </div>
 
   <script src="./src/app.js"></script>
