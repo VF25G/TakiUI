@@ -39,7 +39,7 @@ new Vue({
   },
   methods: {
     showToast() {
-      this.$toast('message information', {
+      this.$toast(`message information with ${parseInt(Math.random() * 100)}`, {
         position: 'bottom',
         enableHtml: false,
         closeButton: {
