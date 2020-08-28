@@ -72,6 +72,7 @@
       },
       close() {
         this.$el.remove()
+        this.$emit('beforeClose')
         this.$destroy()
       },
       onClickClose() {
@@ -120,10 +121,12 @@
       top: 0;
       transform: translateX(-50%);
     }
+
     &.position-bottom {
       bottom: 0;
       transform: translateX(-50%);
     }
+
     &.position-middle {
       top: 50%;
       transform: translate(-50%, -50%);
