@@ -40,7 +40,16 @@ new Vue({
   methods: {
     showToast() {
       this.$toast('message information', {
-        enableHtml: false
+        position: 'bottom',
+        enableHtml: false,
+        closeButton: {
+          text: 'Done',
+          callback() {
+            console.log('Hello')
+          }
+        },
+        autoClose: false,
+        autoCloseDelay: 3
       })
     }
   }
