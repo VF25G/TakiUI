@@ -32,6 +32,10 @@
       }
     },
     mounted() {
+      if (this.$children.length === 0) {
+        console && console.warn &&
+        console.warn('tabs must be have tabs-head & tabs-body')
+      }
       this.$children.forEach((vm) => {
         if (vm.$options.name === 'webUITabsHead') {
           vm.$children.forEach((childVm) => {
