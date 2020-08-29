@@ -45,6 +45,10 @@ new Vue({
   created() {
   },
   methods: {
+    gTabsEventBus(data) {
+      console.log('gTabsEventBus')
+      console.log(data)
+    },
     showToast(position) {
       this.$toast(`message information with ${parseInt(Math.random() * 100)}`, {
         position,

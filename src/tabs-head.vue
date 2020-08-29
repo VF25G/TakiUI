@@ -7,7 +7,11 @@
 
 <script>
   export default {
-    name: 'webUITabsHead'
+    name: 'webUITabsHead',
+    inject: ['eventBus'],
+    created() {
+      this.$emit('update:selected', 'tabs-head data')
+    }
   }
 </script>
 

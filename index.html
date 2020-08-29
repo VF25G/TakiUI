@@ -35,7 +35,7 @@
 <body>
 
   <div id="app">
-    <g-tabs :selected.sync="selectedTab">
+    <g-tabs :selected.sync="selectedTab" @update:selected="gTabsEventBus">
       <g-tabs-head>
         <template slot="actions">
           <button>设置</button>

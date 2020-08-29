@@ -6,7 +6,9 @@
 
 <script>
   export default {
-    name: 'webUITabsBody'
+    name: 'webUITabsBody',
+    inject: ['eventBus'],
+    created() {}
   }
 </script>
 
