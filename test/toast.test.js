@@ -20,12 +20,13 @@ describe('Toast', () => {
           autoClose: 1
         }
       }).$mount(div)
+      Vue.config.errorHandler = done
       vm.$on('beforeClose', () => {
         expect(document.body.contains(vm.$el)).to.eq(false)
         done()
       })
     })
-    it('accept closeButton', () => {
+    it('accept closeButton', (done) => {
       const callback = sinon.fake();
       const Constructor = Vue.extend(Toast)
       const vm = new Constructor({
@@ -38,8 +39,12 @@ describe('Toast', () => {
       }).$mount()
       let closeButton = vm.$el.querySelector('.close')
       expect(closeButton.textContent.trim()).to.eq('message string')
-      closeButton.click()
-      expect(callback).to.have.been.called
+      setTimeout(() => {
+        closeButton.click()
+        expect(callback).to.have.been.called
+        done()
+      },200)
+
     })
     it('accept enableHtml', () => {
       const Constructor = Vue.extend(Toast)
