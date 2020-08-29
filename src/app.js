@@ -49,18 +49,5 @@ new Vue({
       console.log('gTabsEventBus')
       console.log(data)
     },
-    showToast(position) {
-      this.$toast(`message information with ${parseInt(Math.random() * 100)}`, {
-        position,
-        enableHtml: false,
-        closeButton: {
-          text: 'Done',
-          callback() {
-            console.log('Hello')
-          }
-        },
-        autoClose: 3
-      })
-    }
   }
 })
