@@ -51,5 +51,8 @@ new Vue({
       console.log('gTabsEventBus')
       console.log(data)
     },
+    yyy() {
+      console.log('yyy')
+    }
   }
 })
