@@ -31,24 +31,28 @@
         const {contentWrapper, triggerWrapper} = this.$refs
         document.body.appendChild(contentWrapper)
         let {width, height, top, left} = triggerWrapper.getBoundingClientRect()
-        if (this.position === 'top') {
-          contentWrapper.style.left = left + window.scrollX + 'px'
-          contentWrapper.style.top = top + window.scrollY + 'px'
-        } else if (this.position === 'bottom') {
-          contentWrapper.style.left = left + window.scrollX + 'px'
-          contentWrapper.style.top = top + height + window.scrollY + 'px'
-        } else if (this.position === 'left') {
-          contentWrapper.style.left = left + window.scrollX + 'px'
-          let {height: contentHeight} = contentWrapper.getBoundingClientRect()
-          contentWrapper.style.top = top + window.scrollY +
-            (height - contentHeight) / 2 + 'px'
-        } else if (this.position === 'right') {
-          contentWrapper.style.left = left + width + window.scrollX + 'px'
-          let {height: contentHeight} = contentWrapper.getBoundingClientRect()
-          contentWrapper.style.top = top + window.scrollY +
-            (height - contentHeight) / 2 + 'px'
-        }
+        let {height: contentHeight} = contentWrapper.getBoundingClientRect()
 
+        let positions = {
+          top: {
+            top: top + window.scrollY,
+            left: left + window.scrollX
+          },
+          bottom: {
+            top: top + height + window.scrollY,
+            left: left + window.scrollX
+          },
+          left: {
+            top: top + window.scrollY + (height - contentHeight) / 2,
+            left: left + window.scrollX
+          },
+          right: {
+            top: top + window.scrollY + (height - contentHeight) / 2,
+            left: left + width + window.scrollX
+          }
+        }
+        contentWrapper.style.left = positions[this.position].left + 'px'
+        contentWrapper.style.top = positions[this.position].top + 'px'
       },
       onClickDocument(event) {
         if (this.$refs.popover &&
