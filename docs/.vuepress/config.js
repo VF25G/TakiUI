@@ -1,7 +1,12 @@
 module.exports = {
+  base: '/webUI/',
   title: 'Hello VuePress',
   description: 'Just playing around',
   themeConfig: {
+    nav: [
+      {text: '主页', link: '/'},
+      {text: '交流', link: 'https://google.com'}
+    ],
     sidebar: [
       {
         title: '入门',
