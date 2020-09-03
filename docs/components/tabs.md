@@ -2,7 +2,7 @@
 title: Tabs
 ---
 
-# Tabs - 标签页
+# Tabs - 标签
 
 <ClientOnly>
   <tabs-demos></tabs-demos>
