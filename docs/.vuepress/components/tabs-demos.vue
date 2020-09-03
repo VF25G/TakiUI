@@ -24,7 +24,7 @@
     </p>
 
     <div v-highlight>
-      <pre><code class="html">{{tabsCode}}</code></pre>
+      <pre><code class="html">{{formatCode(tabsCode)}}</code></pre>
     </div>
 
     <p>
@@ -32,7 +32,7 @@
     </p>
 
     <div v-highlight>
-      <pre><code class="js">{{jsCode}}</code></pre>
+      <pre><code class="js">{{formatCode(jsCode)}}</code></pre>
     </div>
 
     <h2>禁止选项卡</h2>
@@ -59,7 +59,7 @@
     </p>
 
     <div v-highlight>
-      <pre><code class="html">{{disabledTabsCode}}</code></pre>
+      <pre><code class="html">{{formatCode(disabledTabsCode)}}</code></pre>
     </div>
 
     <p>
@@ -67,12 +67,13 @@
     </p>
 
     <div v-highlight>
-      <pre><code class="js">{{jsCode}}</code></pre>
+      <pre><code class="js">{{formatCode(jsCode)}}</code></pre>
     </div>
 
   </div>
 </template>
 <script>
+  import mixin from '../mixin'
   import Tabs from '../../../src/tabs'
   import TabsBody from '../../../src/tabs-body'
   import TabsHead from '../../../src/tabs-head'
@@ -81,6 +82,7 @@
 
   export default {
     components: {Tabs, TabsBody, TabsHead, TabsItem, TabsPane},
+    mixins: [mixin],
     data() {
       return {
         selected: '1',
@@ -97,7 +99,7 @@
               <TabsPane name="3">content 3</TabsPane>
             </TabsBody>
           </Tabs>
-        `.replace(/^ {8}/gm, '').trim(),
+        `,
 
         disabledTabsCode: `
           <Tabs :selected="selected">
@@ -112,7 +114,7 @@
               <TabsPane name="3">content 3</TabsPane>
             </TabsBody>
           </Tabs>
-        `.replace(/^ {8}/gm, '').trim(),
+        `,
 
         jsCode: `
           data() {
@@ -121,7 +123,7 @@
               // ...
             }
           }
-        `.replace(/^ {8}/gm, '').trim(),
+        `,
       }
     }
   }

@@ -16,7 +16,7 @@
     </p>
 
     <div v-highlight>
-      <pre><code class="html">{{buttonCode}}</code></pre>
+      <pre><code class="html">{{formatCode(buttonCode)}}</code></pre>
     </div>
 
     <h2>组合按钮</h2>
@@ -34,12 +34,13 @@
     </p>
 
     <div v-highlight>
-      <pre><code class="html">{{buttonGroupCode}}</code></pre>
+      <pre><code class="html">{{formatCode(buttonGroupCode)}}</code></pre>
     </div>
 
   </div>
 </template>
 <script>
+  import mixin from '../mixin'
   import Button from '../../../src/button'
   import ButtonGroup from '../../../src/button-group'
 
@@ -48,6 +49,7 @@
       't-button': Button,
       't-button-group': ButtonGroup
     },
+    mixins: [mixin],
     data () {
       return {
         buttonCode: `
@@ -55,14 +57,14 @@
           <t-button icon="settings">默认按钮</t-button>
           <t-button :loading="true">默认按钮</t-button>
           <t-button disabled>默认按钮</t-button>
-      `.replace(/^ {8}/gm, '').trim(),
+        `,
 
         buttonGroupCode: `
           <t-button-group>
             <t-button icon="left" icon-position="left">上一页</t-button>
             <t-button icon="right" icon-position="right">下一页</t-button>
           </t-button-group>
-        `.replace(/^ {8}/gm, '').trim()
+        `
       }
     }
   }
