@@ -20,11 +20,19 @@
     </Tabs>
 
     <p>
-      <strong>代码</strong>
+      <strong>HTML代码</strong>
     </p>
 
     <div v-highlight>
       <pre><code class="html">{{tabsCode}}</code></pre>
+    </div>
+
+    <p>
+      <strong>JS代码</strong>
+    </p>
+
+    <div v-highlight>
+      <pre><code class="js">{{jsCode}}</code></pre>
     </div>
 
     <h2>禁止选项卡</h2>
@@ -47,11 +55,19 @@
     </Tabs>
 
     <p>
-      <strong>代码</strong>
+      <strong>HTML代码</strong>
     </p>
 
     <div v-highlight>
       <pre><code class="html">{{disabledTabsCode}}</code></pre>
+    </div>
+
+    <p>
+      <strong>JS代码</strong>
+    </p>
+
+    <div v-highlight>
+      <pre><code class="js">{{jsCode}}</code></pre>
     </div>
 
   </div>
@@ -81,7 +97,7 @@
               <TabsPane name="3">content 3</TabsPane>
             </TabsBody>
           </Tabs>
-      `.replace(/^ {8}/gm, '').trim(),
+        `.replace(/^ {8}/gm, '').trim(),
 
         disabledTabsCode: `
           <Tabs :selected="selected">
@@ -96,7 +112,16 @@
               <TabsPane name="3">content 3</TabsPane>
             </TabsBody>
           </Tabs>
-      `.replace(/^ {8}/gm, '').trim(),
+        `.replace(/^ {8}/gm, '').trim(),
+
+        jsCode: `
+          data() {
+            return {
+              selected: '1',
+              // ...
+            }
+          }
+        `.replace(/^ {8}/gm, '').trim(),
       }
     }
   }
