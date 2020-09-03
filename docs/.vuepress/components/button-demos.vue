@@ -1,15 +1,15 @@
 <template>
-  <div>
+  <div style="padding-top: 8px">
     <h2>单个按钮</h2>
 
     <p>
       <strong>预览</strong>
     </p>
 
-    <g-button>默认按钮</g-button>
-    <g-button icon="settings">设置按钮</g-button>
-    <g-button :loading="true">加载按钮</g-button>
-    <g-button disabled>禁用按钮</g-button>
+    <t-button>默认按钮</t-button>
+    <t-button icon="settings">默认按钮</t-button>
+    <t-button :loading="true">默认按钮</t-button>
+    <t-button disabled>默认按钮</t-button>
 
     <p>
       <strong>代码</strong>
@@ -24,10 +24,10 @@
       <strong>预览</strong>
     </p>
 
-    <g-button-group>
-      <g-button icon="left" icon-position="left">上一页</g-button>
-      <g-button icon="right" icon-position="right">下一页</g-button>
-    </g-button-group>
+    <t-button-group>
+      <t-button icon="left" icon-position="left">上一页</t-button>
+      <t-button icon="right" icon-position="right">下一页</t-button>
+    </t-button-group>
 
     <p>
       <strong>代码</strong>
@@ -45,23 +45,23 @@
 
   export default {
     components: {
-      'g-button': Button,
-      'g-button-group': ButtonGroup
+      't-button': Button,
+      't-button-group': ButtonGroup
     },
     data () {
       return {
         buttonCode: `
-          <g-button>默认按钮</g-button>
-          <g-button icon="settings">默认按钮</g-button>
-          <g-button :loading="true">默认按钮</g-button>
-          <g-button disabled>默认按钮</g-button>
+          <t-button>默认按钮</t-button>
+          <t-button icon="settings">默认按钮</t-button>
+          <t-button :loading="true">默认按钮</t-button>
+          <t-button disabled>默认按钮</t-button>
       `.replace(/^ {8}/gm, '').trim(),
 
         buttonGroupCode: `
-          <g-button-group>
-            <g-button icon="left" icon-position="left">上一页</g-button>
-            <g-button icon="right" icon-position="right">下一页</g-button>
-          </g-button-group>
+          <t-button-group>
+            <t-button icon="left" icon-position="left">上一页</t-button>
+            <t-button icon="right" icon-position="right">下一页</t-button>
+          </t-button-group>
         `.replace(/^ {8}/gm, '').trim()
       }
     }
