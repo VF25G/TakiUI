@@ -20,7 +20,8 @@ module.exports = {
         children: [
           '/components/button',
           '/components/tabs',
-          '/components/input'
+          '/components/input',
+          '/components/grid',
         ]
       }
     ]
