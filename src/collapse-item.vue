@@ -3,7 +3,7 @@
     <div class="title" @click="toggle" :data-name="name">
       {{title}}
     </div>
-    <div class="content" ref="content" v-if="open">
+    <div class="item-content" ref="content" v-if="open">
       <slot></slot>
     </div>
   </div>
@@ -72,7 +72,7 @@
         border-bottom-right-radius: $border-radius;
       }
     }
-    > .content {
+    > .item-content {
       padding: 8px;
     }
   }
