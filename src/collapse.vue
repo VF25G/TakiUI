@@ -19,7 +19,8 @@
     },
     data() {
       return {
-        eventBus: new Vue()
+        eventBus: new Vue(),
+        localSelected: []
       }
     },
     provide() {
@@ -27,10 +28,21 @@
         eventBus: this.eventBus
       }
     },
+    methods: {
+      setSelectedArray() {
+        this.$on('update:selected', (array) => {
+          this.localSelected = array
+        })
+        if (this.selected) {
+          this.localSelected = this.selected
+        }
+      }
+    },
     mounted() {
-      this.eventBus.$emit('update:selected', this.selected)
+      this.setSelectedArray();
+      this.eventBus.$emit('update:selected', this.localSelected)
       this.eventBus.$on('update:addSelected', (name) => {
-        let selectedCopy = JSON.parse(JSON.stringify(this.selected))
+        let selectedCopy = JSON.parse(JSON.stringify(this.localSelected))
         if (this.single) {
           selectedCopy = [name]
         } else {
@@ -40,7 +52,7 @@
         this.$emit('update:selected', selectedCopy)
       })
       this.eventBus.$on('update:removeSelected', (name) => {
-        let selectedCopy = JSON.parse(JSON.stringify(this.selected))
+        let selectedCopy = JSON.parse(JSON.stringify(this.localSelected))
         let index = selectedCopy.indexOf(name)
         selectedCopy.splice(index, 1)
         this.eventBus.$emit('update:selected', selectedCopy)
