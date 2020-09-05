@@ -6,6 +6,7 @@ module.exports = {
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
   themeConfig: {
+    logo: '/favicon.ico',
     nav: [
       { text: '主页', link: '/' },
       { text: 'Github', link: 'https://github.com/VF25G/' },
