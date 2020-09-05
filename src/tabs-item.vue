@@ -49,7 +49,7 @@
 </script>
 
 <style lang="scss" scoped>
-  $blue: blue;
+  $blue: #43658b;
   $disabled-text-color: grey;
   .tabs-item {
     flex-shrink: 0;

@@ -35,9 +35,23 @@
 </script>
 
 <style lang="scss" scoped>
+  @keyframes pane {
+    0% {
+      transform: translateX(100%);
+    }
+    60% {
+      transform: translateX(-3%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
   .tabs-pane {
-    padding: 0 1em;
     &.active {
+      color: #4e89ae;
+      padding: 1.2em;
+      animation: pane 600ms ;
     }
   }
 </style>
