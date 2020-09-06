@@ -171,7 +171,8 @@
           <tbody>
           <tr>
             <td>name</td>
-            <td class="des">必要属性：唯一标识符；需与 TabsItem 一一对应</td>
+            <td class="des">必要属性：唯一标识符；
+              <p>需与 TabsItem 一一对应</p></td>
             <td class="type">String | Number</td>
             <td>——</td>
             <td>——</td>
