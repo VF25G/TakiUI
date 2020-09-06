@@ -213,6 +213,27 @@
 
   .tRow {
     margin: 10px 0;
+    color: white;
+    &:first-child {
+      > .col > .tCol {
+        background: #4e89ae;
+      }
+    }
+    &:nth-child(2) {
+      > .col > .tCol {
+        background: #43658b;
+      }
+    }
+    &:nth-child(3) {
+      > .col > .tCol {
+        background: #ed6663;
+      }
+    }
+    &:last-child {
+      > .col > .tCol {
+        background: #ffa372;
+      }
+    }
   }
 
   .tCol {

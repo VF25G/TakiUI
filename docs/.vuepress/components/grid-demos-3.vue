@@ -146,6 +146,23 @@
 
   .tRow {
     margin: 10px 0;
+    color: white;
+    &:first-child {
+      > .col > .tCol {
+        background: #ff9a76;
+      }
+    }
+    &:nth-child(2) {
+      > .col > .tCol {
+        color: #999999;
+        background: #ffeadb;
+      }
+    }
+    &:last-child {
+      > .col > .tCol {
+        background: #f7c5a8;
+      }
+    }
   }
 
   .tCol {

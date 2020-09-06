@@ -122,6 +122,17 @@
 
   .tRow {
     margin: 10px 0;
+    color: white;
+    &:first-child {
+      > .col > .tCol {
+        background: #5eaaa8;
+      }
+    }
+    &:last-child {
+      > .col > .tCol {
+        background: #056676;
+      }
+    }
   }
 
   .tCol {

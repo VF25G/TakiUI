@@ -7,10 +7,20 @@
     </p>
 
     <section>
-      当页面宽度小于577px：两行一列<br>
-      当页面宽度大于577px：一行两列
+      当页面宽度小于577px：两行两列<br>
+      当页面宽度大于577px：一行四列
     </section>
     <section class="responsiveDemo">
+      <t-row class="tRow">
+        <t-col span="24"
+               :ipad="{span: 11}" >
+          <div class="tCol">Responsive</div>
+        </t-col>
+        <t-col span="24"
+               :ipad="{span: 12, offset: 1}" >
+          <div class="tCol">Responsive</div>
+        </t-col>
+      </t-row>
       <t-row class="tRow">
         <t-col span="24"
                :ipad="{span: 11}" >
@@ -116,6 +126,16 @@
               <div class="tCol">Responsive</div>
             </t-col>
           </t-row>
+          <t-row class="tRow">
+            <t-col span="24"
+                   :ipad="{span: 12}" >
+              <div class="tCol">Responsive</div>
+            </t-col>
+            <t-col span="24"
+                   :ipad="{span: 12}" >
+              <div class="tCol">Responsive</div>
+            </t-col>
+          </t-row>
         `,
       }
     }
@@ -129,6 +149,17 @@
 
   .tRow {
     margin: 10px 0;
+    color: #184d47;
+    &:first-child {
+      > .col > .tCol {
+        background: #96bb7c;
+      }
+    }
+    &:last-child {
+      > .col > .tCol {
+        background: #d6efc7;
+      }
+    }
   }
 
   .tCol {
