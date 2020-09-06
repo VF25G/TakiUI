@@ -8,4 +8,5 @@ title: Grid
   <grid-demos></grid-demos>
   <grid-demos-2></grid-demos-2>
   <grid-demos-3></grid-demos-3>
+  <grid-demos-4></grid-demos-4>
 </ClientOnly>
