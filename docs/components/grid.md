@@ -6,4 +6,6 @@ title: Grid
 
 <ClientOnly>
   <grid-demos></grid-demos>
+  <grid-demos-2></grid-demos-2>
+  <grid-demos-3></grid-demos-3>
 </ClientOnly>

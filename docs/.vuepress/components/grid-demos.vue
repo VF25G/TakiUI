@@ -6,91 +6,91 @@
       <strong>预览</strong>
     </p>
 
-    <div class="normalDemo">
-      <TRow class="tRow">
-        <TCol span="8">
+    <section class="normalDemo">
+      <t-row class="tRow">
+        <t-col span="8">
           <div class="tCol">8</div>
-        </TCol>
-        <TCol span="8">
+        </t-col>
+        <t-col span="8">
           <div class="tCol">8</div>
-        </TCol>
-        <TCol span="8">
+        </t-col>
+        <t-col span="8">
           <div class="tCol">8</div>
-        </TCol>
-      </TRow>
-      <TRow class="tRow">
-        <TCol span="6">
+        </t-col>
+      </t-row>
+      <t-row class="tRow">
+        <t-col span="6">
           <div class="tCol">6</div>
-        </TCol>
-        <TCol span="6">
+        </t-col>
+        <t-col span="6">
           <div class="tCol">6</div>
-        </TCol>
-        <TCol span="6">
+        </t-col>
+        <t-col span="6">
           <div class="tCol">6</div>
-        </TCol>
-        <TCol span="6">
+        </t-col>
+        <t-col span="6">
           <div class="tCol">6</div>
-        </TCol>
-      </TRow>
-      <TRow class="tRow">
-        <TCol span="4">
+        </t-col>
+      </t-row>
+      <t-row class="tRow">
+        <t-col span="4">
           <div class="tCol">4</div>
-        </TCol>
-        <TCol span="4">
+        </t-col>
+        <t-col span="4">
           <div class="tCol">4</div>
-        </TCol>
-        <TCol span="4">
+        </t-col>
+        <t-col span="4">
           <div class="tCol">4</div>
-        </TCol>
-        <TCol span="4">
+        </t-col>
+        <t-col span="4">
           <div class="tCol">4</div>
-        </TCol>
-        <TCol span="4">
+        </t-col>
+        <t-col span="4">
           <div class="tCol">4</div>
-        </TCol>
-        <TCol span="4">
+        </t-col>
+        <t-col span="4">
           <div class="tCol">4</div>
-        </TCol>
-      </TRow>
-      <TRow class="tRow">
-        <TCol span="2">
+        </t-col>
+      </t-row>
+      <t-row class="tRow">
+        <t-col span="2">
           <div class="tCol">2</div>
-        </TCol>
-        <TCol span="2">
+        </t-col>
+        <t-col span="2">
           <div class="tCol">2</div>
-        </TCol>
-        <TCol span="2">
+        </t-col>
+        <t-col span="2">
           <div class="tCol">2</div>
-        </TCol>
-        <TCol span="2">
+        </t-col>
+        <t-col span="2">
           <div class="tCol">2</div>
-        </TCol>
-        <TCol span="2">
+        </t-col>
+        <t-col span="2">
           <div class="tCol">2</div>
-        </TCol>
-        <TCol span="2">
+        </t-col>
+        <t-col span="2">
           <div class="tCol">2</div>
-        </TCol>
-        <TCol span="2">
+        </t-col>
+        <t-col span="2">
           <div class="tCol">2</div>
-        </TCol>
-        <TCol span="2">
+        </t-col>
+        <t-col span="2">
           <div class="tCol">2</div>
-        </TCol>
-        <TCol span="2">
+        </t-col>
+        <t-col span="2">
           <div class="tCol">2</div>
-        </TCol>
-        <TCol span="2">
+        </t-col>
+        <t-col span="2">
           <div class="tCol">2</div>
-        </TCol>
-        <TCol span="2">
+        </t-col>
+        <t-col span="2">
           <div class="tCol">2</div>
-        </TCol>
-        <TCol span="2">
+        </t-col>
+        <t-col span="2">
           <div class="tCol">2</div>
-        </TCol>
-      </TRow>
-    </div>
+        </t-col>
+      </t-row>
+    </section>
 
     <p>
       <strong>代码</strong>
@@ -100,254 +100,106 @@
       <pre><code class="html">{{formatCode(normalCode)}}</code></pre>
     </div>
 
-    <h2>区块间隔 - gutter</h2>
-
-    <p>
-      <strong>预览</strong>
-    </p>
-
-    <div class="gutterDemo">
-      <TRow class="tRow" gutter="10">
-        <TCol span="8">
-          <div class="tCol">8</div>
-        </TCol>
-        <TCol span="8">
-          <div class="tCol">8</div>
-        </TCol>
-        <TCol span="8">
-          <div class="tCol">8</div>
-        </TCol>
-      </TRow>
-      <TRow class="tRow" gutter="10">
-        <TCol span="6">
-          <div class="tCol">6</div>
-        </TCol>
-        <TCol span="6">
-          <div class="tCol">6</div>
-        </TCol>
-        <TCol span="6">
-          <div class="tCol">6</div>
-        </TCol>
-        <TCol span="6">
-          <div class="tCol">6</div>
-        </TCol>
-      </TRow>
-    </div>
-
-    <p>
-      <strong>HTML代码</strong>
-    </p>
-
-    <div v-highlight>
-      <pre><code class="html">{{formatCode(gutterCode)}}</code></pre>
-    </div>
-
-    <h2>偏移-offset</h2>
-
-    <p>
-      <strong>预览</strong>
-    </p>
-
-    <div class="offsetDemo">
-      <TRow class="tRow">
-        <TCol span="8">
-          <div class="tCol">8</div>
-        </TCol>
-        <TCol span="8" offset="8">
-          <div class="tCol">8</div>
-        </TCol>
-      </TRow>
-      <TRow class="tRow">
-        <TCol span="6" offset="6">
-          <div class="tCol">6</div>
-        </TCol>
-        <TCol span="6" offset="6">
-          <div class="tCol">6</div>
-        </TCol>
-      </TRow>
-      <TRow class="tRow">
-        <TCol span="4">
-          <div class="tCol">4</div>
-        </TCol>
-        <TCol span="4" offset="2">
-          <div class="tCol">4</div>
-        </TCol>
-        <TCol span="4" offset="4">
-          <div class="tCol">4</div>
-        </TCol>
-        <TCol span="4" offset="2">
-          <div class="tCol">4</div>
-        </TCol>
-      </TRow>
-    </div>
-
-    <p>
-      <strong>HTML代码</strong>
-    </p>
-
-    <div v-highlight>
-      <pre><code class="html">{{formatCode(offsetCode)}}</code></pre>
-    </div>
-
   </div>
 </template>
 
 <script>
   import mixin from '../mixin'
-  import TRow from '../../../src/row'
-  import TCol from '../../../src/col'
+  import Row from '../../../src/row'
+  import Col from '../../../src/col'
 
   export default {
-    components: {TRow, TCol},
+    components: {
+      't-row': Row,
+      't-col': Col
+    },
     mixins: [mixin],
     data() {
       return {
-        value: 'Hello webUI',
         normalCode: `
-          <TRow class="tRow">
-            <TCol span="8">
+          <t-row class="tRow">
+            <t-col span="8">
               <div class="tCol">8</div>
-            </TCol>
-            <TCol span="8">
+            </t-col>
+            <t-col span="8">
               <div class="tCol">8</div>
-            </TCol>
-            <TCol span="8">
+            </t-col>
+            <t-col span="8">
               <div class="tCol">8</div>
-            </TCol>
-          </TRow>
-          <TRow class="tRow">
-            <TCol span="6">
+            </t-col>
+          </t-row>
+          <t-row class="tRow">
+            <t-col span="6">
               <div class="tCol">6</div>
-            </TCol>
-            <TCol span="6">
+            </t-col>
+            <t-col span="6">
               <div class="tCol">6</div>
-            </TCol>
-            <TCol span="6">
+            </t-col>
+            <t-col span="6">
               <div class="tCol">6</div>
-            </TCol>
-            <TCol span="6">
+            </t-col>
+            <t-col span="6">
               <div class="tCol">6</div>
-            </TCol>
-      </TRow>
-          <TRow class="tRow">
-            <TCol span="4">
+            </t-col>
+          </t-row>
+          <t-row class="tRow">
+            <t-col span="4">
               <div class="tCol">4</div>
-            </TCol>
-            <TCol span="4">
+            </t-col>
+            <t-col span="4">
               <div class="tCol">4</div>
-            </TCol>
-            <TCol span="4">
+            </t-col>
+            <t-col span="4">
               <div class="tCol">4</div>
-            </TCol>
-            <TCol span="4">
+            </t-col>
+            <t-col span="4">
               <div class="tCol">4</div>
-            </TCol>
-            <TCol span="4">
+            </t-col>
+            <t-col span="4">
               <div class="tCol">4</div>
-            </TCol>
-            <TCol span="4">
+            </t-col>
+            <t-col span="4">
               <div class="tCol">4</div>
-            </TCol>
-          </TRow>
-          <TRow class="tRow">
-            <TCol span="2">
+            </t-col>
+          </t-row>
+          <t-row class="tRow">
+            <t-col span="2">
               <div class="tCol">2</div>
-            </TCol>
-            <TCol span="2">
+            </t-col>
+            <t-col span="2">
               <div class="tCol">2</div>
-            </TCol>
-            <TCol span="2">
+            </t-col>
+            <t-col span="2">
               <div class="tCol">2</div>
-            </TCol>
-            <TCol span="2">
+            </t-col>
+            <t-col span="2">
               <div class="tCol">2</div>
-            </TCol>
-            <TCol span="2">
+            </t-col>
+            <t-col span="2">
               <div class="tCol">2</div>
-            </TCol>
-            <TCol span="2">
+            </t-col>
+            <t-col span="2">
               <div class="tCol">2</div>
-            </TCol>
-            <TCol span="2">
+            </t-col>
+            <t-col span="2">
               <div class="tCol">2</div>
-            </TCol>
-            <TCol span="2">
+            </t-col>
+            <t-col span="2">
               <div class="tCol">2</div>
-            </TCol>
-            <TCol span="2">
+            </t-col>
+            <t-col span="2">
               <div class="tCol">2</div>
-            </TCol>
-            <TCol span="2">
+            </t-col>
+            <t-col span="2">
               <div class="tCol">2</div>
-            </TCol>
-            <TCol span="2">
+            </t-col>
+            <t-col span="2">
               <div class="tCol">2</div>
-            </TCol>
-            <TCol span="2">
+            </t-col>
+            <t-col span="2">
               <div class="tCol">2</div>
-            </TCol>
-          </TRow>
-        `,
-
-        gutterCode: `
-          <TRow class="tRow" gutter="10">
-            <TCol span="8">
-              <div class="tCol">8</div>
-            </TCol>
-            <TCol span="8">
-              <div class="tCol">8</div>
-            </TCol>
-            <TCol span="8">
-              <div class="tCol">8</div>
-            </TCol>
-          </TRow>
-          <TRow class="tRow" gutter="10">
-            <TCol span="6">
-              <div class="tCol">6</div>
-            </TCol>
-            <TCol span="6">
-              <div class="tCol">6</div>
-            </TCol>
-            <TCol span="6">
-              <div class="tCol">6</div>
-            </TCol>
-            <TCol span="6">
-              <div class="tCol">6</div>
-            </TCol>
-          </TRow>
-        `,
-
-        offsetCode: `
-          <TRow class="tRow">
-            <TCol span="8">
-              <div class="tCol">8</div>
-            </TCol>
-            <TCol span="8" offset="8">
-              <div class="tCol">8</div>
-            </TCol>
-          </TRow>
-          <TRow class="tRow">
-            <TCol span="6" offset="6">
-              <div class="tCol">6</div>
-            </TCol>
-            <TCol span="6" offset="6">
-              <div class="tCol">6</div>
-            </TCol>
-          </TRow>
-          <TRow class="tRow">
-            <TCol span="4">
-              <div class="tCol">4</div>
-            </TCol>
-            <TCol span="4" offset="2">
-              <div class="tCol">4</div>
-            </TCol>
-            <TCol span="4" offset="4">
-              <div class="tCol">4</div>
-            </TCol>
-            <TCol span="4" offset="2">
-              <div class="tCol">4</div>
-            </TCol>
-          </TRow>
+            </t-col>
+          </t-row>
         `,
       }
     }
