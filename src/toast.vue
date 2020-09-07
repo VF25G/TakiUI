@@ -1,5 +1,5 @@
 <template>
-  <div class="webUI-toast" :class="toastClasses">
+  <div class="taki-toast" :class="toastClasses">
     <div class="toast" ref="toast">
       <div class="message">
         <slot v-if="!enableHtml"></slot>
@@ -104,7 +104,7 @@
     100% {opacity: 1;}
   }
 
-  .webUI-toast {
+  .taki-toast {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);

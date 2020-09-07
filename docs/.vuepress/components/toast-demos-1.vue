@@ -6,7 +6,9 @@
       <strong>预览</strong>
     </p>
 
-    <t-button @click="$toast('点击弹出提示')">上方弹出</t-button>
+    <p>可通过autoClose设置自动关闭时长，默认为3秒</p>
+
+    <t-button @click="$toast('点击弹出提示', {autoClose: 1})">上方弹出</t-button>
     <t-button @click="$toast('点击弹出提示', {position:'middle'})">中间弹出</t-button>
     <t-button @click="$toast('点击弹出提示', {position:'bottom'})">下方弹出</t-button>
 
@@ -31,21 +33,21 @@
 <script>
   import mixin from '../mixin'
   import plugin from '../../../src/plugin'
-  import TButton from '../../../src/button'
+  import Button from '../../../src/button'
   import Vue from 'vue'
 
   Vue.use(plugin)
 
   export default {
     components: {
-      't-button': TButton
+      't-button': Button
       },
     mixins: [mixin],
     data() {
       return {
         value: 'Hello webUI',
         toastCode: `
-          <t-button @click="$toast('点击弹出提示')">
+          <t-button @click="$toast('点击弹出提示', {autoClose: 1})">
             上方弹出
           </t-button>
           <t-button @click="$toast('点击弹出提示', {position:'middle'})">
@@ -56,7 +58,7 @@
           </t-button>
         `,
         CSSCode: `
-          .webUI-toast {
+          .taki-toast {
             z-index: 20;
           }
         `
@@ -66,7 +68,7 @@
 </script>
 
 <style>
-  .webUI-toast {
+  .taki-toast {
     z-index: 20;
   }
 </style>

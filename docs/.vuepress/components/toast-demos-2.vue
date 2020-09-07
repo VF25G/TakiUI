@@ -39,14 +39,14 @@
 <script>
   import mixin from '../mixin'
   import plugin from '../../../src/plugin'
-  import TButton from '../../../src/button'
+  import Button from '../../../src/button'
   import Vue from 'vue'
 
   Vue.use(plugin)
 
   export default {
     components: {
-      't-button': TButton
+      't-button': Button
     },
     mixins: [mixin],
     data() {
@@ -71,7 +71,7 @@
                 closeButton: {
                   text: '嗯',
                   callback: () => {
-                    console.log('男子高中生日常')
+                    window.alert('男子高中生日常')
                   }
                 }
               })
@@ -79,7 +79,7 @@
           }
         `,
         CSSCode: `
-          .webUI-toast {
+          .taki-toast {
             z-index: 20;
           }
         `
@@ -92,7 +92,7 @@
           closeButton: {
             text: '嗯',
             callback: () => {
-              console.log('男子高中生日常')
+              window.alert('男子高中生日常')
             }
           }
         })
@@ -102,7 +102,7 @@
 </script>
 
 <style>
-  .webUI-toast {
+  .taki-toast {
     z-index: 20;
   }
 </style>
