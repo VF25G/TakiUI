@@ -1,15 +1,17 @@
 <template>
   <transition name="slide">
-    <div class="sider" v-if="visible">
+    <div class="taki-sider" v-if="visible">
       <slot></slot>
-      <button @click="visible=false">close</button>
+      <t-button @click="visible=false">close</t-button>
     </div>
   </transition>
 </template>
 
 <script>
+  import Button from '../src/button'
   export default {
     name: 'webUISider',
+    components: { 't-button': Button },
     data() {
       return {
         visible: true
@@ -19,7 +21,7 @@
 </script>
 
 <style lang="scss">
-  .sider {
+  .taki-sider {
     position: relative;
     > button {
       position: absolute;

@@ -6,22 +6,24 @@
       <strong>预览</strong>
     </p>
 
-    <t-layout style="color: white;">
-      <t-header style="height: 50px; background:lightskyblue;">
-        header
-      </t-header>
-      <t-layout>
-        <t-sider style="height: 100px; background:#ddd; width:200px; color: black;">
-          sider
-        </t-sider>
-        <t-content style="height: 100px; background:deepskyblue;">
-          content
-        </t-content>
+    <section>
+      <t-layout style="overflow: hidden;">
+        <t-header style="height: 50px; background:#383e56; color: #eedad1">
+          header
+        </t-header>
+        <t-layout>
+          <t-sider style="height: 100px; background:#d4b5b0; width:200px;">
+            sider
+          </t-sider>
+          <t-content style="height: 100px; background:#f69e7b;">
+            content
+          </t-content>
+        </t-layout>
+        <t-footer style="height: 50px; background:#eedad1;">
+          footer
+        </t-footer>
       </t-layout>
-      <t-footer style="height: 50px; background:lightskyblue;">
-        footer
-      </t-footer>
-    </t-layout>
+    </section>
 
     <p>
       <strong>代码</strong>
@@ -53,19 +55,19 @@
       return {
         value: 'Hello webUI',
         inputCode: `
-          <t-layout style="color: white; overflow:hidden;">
-            <t-header style="height: 50px; background:lightskyblue;">
+          <t-layout style="overflow: hidden;">
+            <t-header style="height: 50px; background:#383e56; color: #eedad1">
               header
             </t-header>
             <t-layout>
-              <t-sider style="height: 100px; background:#ddd; width:200px; color: black;">
+              <t-sider style="height: 100px; background:#d4b5b0; width:200px;">
                 sider
               </t-sider>
-              <t-content style="height: 100px; background:deepskyblue;">
+              <t-content style="height: 100px; background:#f69e7b;">
                 content
               </t-content>
             </t-layout>
-            <t-footer style="height: 50px; background:lightskyblue;">
+            <t-footer style="height: 50px; background:#eedad1;">
               footer
             </t-footer>
           </t-layout>
@@ -78,5 +80,11 @@
 <style lang="scss" scoped>
   * {
     box-sizing: border-box;
+  }
+  .taki-header, .taki-content, .taki-footer, .taki-sider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #383e56;
   }
 </style>

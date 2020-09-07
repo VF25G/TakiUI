@@ -6,17 +6,19 @@
       <strong>预览</strong>
     </p>
 
-    <t-layout style="color: white;">
-      <t-header style="height: 50px; background:lightskyblue;">
-        header
-      </t-header>
-      <t-content style="height: 100px; background:deepskyblue;">
-        content
-      </t-content>
-      <t-footer style="height: 50px; background:lightskyblue;">
-        footer
-      </t-footer>
-    </t-layout>
+    <section>
+      <t-layout>
+        <t-header style="height: 50px; background:#383e56;color: #eedad1;">
+          header
+        </t-header>
+        <t-content style="height: 100px; background:#f69e7b;">
+          content
+        </t-content>
+        <t-footer style="height: 50px; background:#eedad1;">
+          footer
+        </t-footer>
+      </t-layout>
+    </section>
 
     <p>
       <strong>代码</strong>
@@ -48,14 +50,14 @@
       return {
         value: 'Hello webUI',
         inputCode: `
-          <t-layout style="color: white; margin-bottom:50px;">
-            <t-header style="height: 50px; background:lightskyblue;">
+          <t-layout style="color: white;">
+            <t-header style="height: 50px; background:#84a9ac;">
               header
             </t-header>
-            <t-content style="height: 100px; background:deepskyblue;">
+            <t-content style="height: 100px; background:#3b6978;">
               content
             </t-content>
-            <t-footer style="height: 50px; background:lightskyblue;">
+            <t-footer style="height: 50px; background:#204051;">
               footer
             </t-footer>
           </t-layout>
@@ -68,5 +70,12 @@
 <style lang="scss" scoped>
   * {
     box-sizing: border-box;
+  }
+
+  .taki-header, .taki-content, .taki-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #383e56;
   }
 </style>

@@ -1,11 +1,11 @@
 <template>
-  <div class="footer">
+  <div class="taki-header">
     <slot></slot>
   </div>
 </template>
 
 <style lang="scss" scoped>
-  .footer {
+  .taki-header {
 
   }
 </style>

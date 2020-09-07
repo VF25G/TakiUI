@@ -1,5 +1,5 @@
 <template>
-  <div class="webUI-content">
+  <div class="taki-content">
     <slot></slot>
   </div>
 </template>
@@ -11,7 +11,7 @@
 </script>
 
 <style lang="scss" scoped>
-  .webUI-content {
+  .taki-content {
     flex-grow: 1;
   }
 </style>
