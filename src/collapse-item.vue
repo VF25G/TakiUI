@@ -3,9 +3,11 @@
     <div class="title" @click="toggle" :data-name="name">
       {{title}}
     </div>
-    <div class="item-content" ref="content" v-if="open">
-      <slot></slot>
-    </div>
+    <transition name="collapseSlide">
+      <div class="item-content" ref="content" v-if="open">
+        <slot></slot>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -46,7 +48,7 @@
 </script>
 
 <style lang="scss" scoped>
-  $grey: #dddddd;
+  $grey: #d8d3cd;
   $border-radius: 4px;
   .collapseItem {
     > .title {
@@ -75,5 +77,12 @@
     > .item-content {
       padding: 8px;
     }
+  }
+  .collapseSlide-enter-active, .collapseSlide-leave-active{
+    transition: all .4s ease-in;
+  }
+
+  .collapseSlide-enter, .collapseSlide-leave-to{
+    opacity: 0;
   }
 </style>

@@ -63,10 +63,10 @@
 </script>
 
 <style lang="scss" scoped>
-  $grey: #dddddd;
+  $lineColor: #d8d3cd;
   $border-radius: 4px;
   .collapse {
-    border: 1px solid $grey;
+    border: 1px solid $lineColor;
     border-radius: $border-radius;
   }
 </style>
