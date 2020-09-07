@@ -3,11 +3,9 @@
     <div class="title" @click="toggle" :data-name="name">
       {{title}}
     </div>
-    <transition name="collapseSlide">
-      <div class="item-content" ref="content" v-if="open">
-        <slot></slot>
-      </div>
-    </transition>
+    <div class="item-content" ref="content" v-if="open">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
@@ -77,12 +75,5 @@
     > .item-content {
       padding: 8px;
     }
-  }
-  .collapseSlide-enter-active, .collapseSlide-leave-active{
-    transition: all .4s ease-in;
-  }
-
-  .collapseSlide-enter, .collapseSlide-leave-to{
-    opacity: 0;
   }
 </style>
