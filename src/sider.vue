@@ -10,7 +10,7 @@
 <script>
   import Button from '../src/button'
   export default {
-    name: 'webUISider',
+    name: 'takiUISider',
     components: { 't-button': Button },
     data() {
       return {

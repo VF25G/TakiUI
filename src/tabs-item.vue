@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    name: 'webUITabsItem',
+    name: 'takiUITabsItem',
     inject: ['eventBus'],
     data() {
       return {

@@ -15,7 +15,7 @@
 
 <script>
   export default {
-    name: 'webUIToast',
+    name: 'takiUIToast',
     props: {
       autoClose: {
         type: [Boolean, Number],

@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    name: 'webUIRow',
+    name: 'takiUIRow',
     props: {
       gutter: {
         type: [Number, String]

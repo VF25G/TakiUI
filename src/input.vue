@@ -18,7 +18,7 @@
 
   export default {
     components: {Icon},
-    name: 'webUIInput',
+    name: 'takiUIInput',
     props: {
       value: {
         type: String

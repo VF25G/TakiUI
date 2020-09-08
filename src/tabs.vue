@@ -7,7 +7,7 @@
 <script>
   import Vue from 'vue'
   export default {
-    name: 'webUITabs',
+    name: 'takiUITabs',
     props: {
       selected: {
         type: String,
@@ -40,9 +40,9 @@
       },
       selectTab() {
         this.$children.forEach((vm) => {
-          if (vm.$options.name === 'webUITabsHead') {
+          if (vm.$options.name === 'takiUITabsHead') {
             vm.$children.forEach((childVm) => {
-              if (childVm.$options.name === 'webUITabsItem'
+              if (childVm.$options.name === 'takiUITabsItem'
                 && childVm.$props.name === this.selected) {
                 this.eventBus.$emit('update:selected', this.selected, childVm)
               }

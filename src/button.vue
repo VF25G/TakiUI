@@ -13,7 +13,7 @@
 <script>
   import Icon from './icon'
   export default {
-    name: 'webUIButton',
+    name: 'takiUIButton',
     components: {
       'g-icon': Icon
     },

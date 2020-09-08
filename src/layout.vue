@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    name: 'webUILayout',
+    name: 'takiUILayout',
     data () {
       return {
         layoutClass: {
@@ -16,7 +16,7 @@
     },
     mounted() {
       this.$children.forEach((vm) => {
-        if (vm.$options.name === 'webUISider') {
+        if (vm.$options.name === 'takiUISider') {
           this.layoutClass.hasSider = true
         }
       })

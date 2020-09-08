@@ -7,7 +7,7 @@
 <script lang="ts">
   import Vue from 'vue'
   export default {
-    name: 'webUICollapse',
+    name: 'takiUICollapse',
     props: {
       single: {
         type: Boolean,

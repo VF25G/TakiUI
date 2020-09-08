@@ -17,7 +17,7 @@
     return valid
   }
   export default {
-    name: 'webUICol',
+    name: 'takiUICol',
     props: {
       span: {
         type: [Number, String]

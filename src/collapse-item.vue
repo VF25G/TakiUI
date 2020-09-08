@@ -11,7 +11,7 @@
 
 <script lang="ts">
   export default {
-    name: 'webUICollapseItem',
+    name: 'takiUICollapseItem',
     props: {
       title: {
         type: String,

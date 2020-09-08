@@ -10,7 +10,7 @@
 
 <script>
   export default {
-    name: 'webUITabsHead',
+    name: 'takiUITabsHead',
     inject: ['eventBus'],
     methods: {
       updateLinePosition(selectedVm) {

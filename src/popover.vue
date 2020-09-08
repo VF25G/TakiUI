@@ -13,7 +13,7 @@
 
 <script>
   export default {
-    name: 'webUIPopover',
+    name: 'takiUIPopover',
     data() {
       return {visible: false}
     },
