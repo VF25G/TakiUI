@@ -80,6 +80,11 @@
       </div>
     </section>
 
+    <section>
+      使用Toast组件，需引入plugin、Vue，并且调用Vue.use
+      <pre><code class="js">{{formatCode(bashCode)}}</code></pre>
+    </section>
+
   </div>
 </template>
 <script>
@@ -123,6 +128,12 @@
           .taki-toast {
             z-index: 20;
           }
+        `,
+        bashCode: `
+          import plugin from 'takiui-beta/src/plugin'
+          import Vue from 'vue'
+
+          Vue.use(plugin)
         `
       }
     },
