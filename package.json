@@ -1,6 +1,6 @@
 {
-  "name": "webui",
-  "version": "0.0.1",
+  "name": "takiui-beta",
+  "version": "0.0.6",
   "description": "基于Vue实现的UI框架",
   "main": "dist/index.js",
   "scripts": {
