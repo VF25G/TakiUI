@@ -4,9 +4,12 @@
   </a>
 </p>
 
+<div align="center">
+  
 [![Build Status](https://travis-ci.org/VF25G/TakiUI.svg?branch=master)](https://travis-ci.org/VF25G/TakiUI)
 ![](https://img.shields.io/badge/language-JavaScript-yellow.svg)
 ![](https://img.shields.io/badge/license-MIT-000000.svg)
+</div>
 <h2 align="center">Taki UI 一个基于 Vue2.0 实现的轻量型 UI 框架</h2>
 
 ## 介绍
